@@ -22,11 +22,9 @@ Few-shot classification aims to learn a classifier that categorizes objects of u
 * [CIFAR-FS](https://drive.google.com/file/d/1GjGMI0q3bgcpcB_CjI40fX54WgLPuTpS/view?usp=sharing)
 * [CUB](https://drive.google.com/file/d/1hbzc_P1FuxMkcabkgn9ZKinBwW683j45/view)
 * [glove word embedding](https://nlp.stanford.edu/projects/glove/)
-
-For each dataset, please specify the path to the directory.
   
-## pretrained checkpoints for evaluation
-Directory path to save the pretrained models should be: ./checkpoints/[dataname]/
+## Pretrained checkpoints for evaluation
+Please specify the path of the pretrained checkpoints to "./checkpoints/[dataname]"
 
 ## Running Experiments
 Run pretrain phase:
