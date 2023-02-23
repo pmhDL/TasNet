@@ -33,13 +33,15 @@ python run_pre.py
 ```
 Run train and test phase:
 ```bash
-If you want to train the models from scratch, please run the run_pre.py to pretrain the backbone, and then run the run_fusion.py or run_concatenation.py to train the meta learning model.
+If you want to train the models from scratch, please run the run_pre.py to pretrain the backbone, and then run the run_fusion.py 
+or run_concatenation.py to train the meta learning model.
 python run_fusion.py
 python run_concatenation.py
 ```
 
 ## Acknowledgments
 Our project references the codes in the following repos.
+
 [**Meta-Transfer Learning**](https://github.com/yaoyao-liu/meta-transfer-learning)
 
 [**Adaptive Cross-Modal Few-shot Learning**](https://github.com/ElementAI/am3)
