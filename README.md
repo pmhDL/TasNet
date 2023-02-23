@@ -13,6 +13,9 @@ PyTorch implementation of Few shot classification with task adaptive semantic fe
 ## Abstract
 Few-shot classification aims to learn a classifier that categorizes objects of unseen classes with limited samples. One general approach is to mine as much information as possible from limited samples. This can be achieved by incorporating data aspects from multiple modals. However, existing multi-modality methods only use additional modality in support samples while adhering to a single modal in query samples. Such approach could lead to information imbalance between support and query samples, which confounds model generalization from support to query samples. Towards this problem, we propose a task-adaptive semantic feature learning mechanism to incorporates semantic features for both support and query samples. The semantic feature learner is trained episodic-wisely by regressing from the feature vectors of the support samples. Then the query samples can obtain the semantic features with this module. Such method maintains a consistent training scheme between support and query samples and enables direct model transfer from support to query datasets, which significantly improves model generalization. We develop two modality combination implementations: feature concatenation and feature fusion, based on the semantic feature learner. Extensive experiments conducted on four benchmarks demonstrate that our method outperforms state-of-the-arts, proving the effectiveness of our method.
 
+## Architecture
+![Image text](https://github.com/pmhDL/TasNet/blob/main/Image/architecture.png)
+
 ## Download the Datasets
 * [miniImageNet](https://drive.google.com/file/d/1fJAK5WZTjerW7EWHHQAR9pRJVNg1T1Y7/view?usp=sharing) 
 * [tieredImageNet](https://drive.google.com/file/d/1Letu5U_kAjQfqJjNPWS_rdjJ7Fd46LbX/view?usp=sharing)
@@ -20,12 +23,9 @@ Few-shot classification aims to learn a classifier that categorizes objects of u
 * [CUB](https://drive.google.com/file/d/1hbzc_P1FuxMkcabkgn9ZKinBwW683j45/view)
 * [glove word embedding](https://nlp.stanford.edu/projects/glove/)
 
-For each dataset, specify the path to the directory. For example, in run_fusion.py line 23:
-    ```
-    ' --dataset_dir=' + './data/' + dataname \
-    ```
+For each dataset, please specify the path to the directory.
   
-## pretrained models checkpoints for evaluation
+## pretrained checkpoints for evaluation
 Directory path to save the pretrained models should be: ./checkpoints/[dataname]/
 
 ## Running Experiments
