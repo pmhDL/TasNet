@@ -22,7 +22,7 @@ Few-shot classification aims to learn a classifier that categorizes objects of u
 * [glove word embedding](https://nlp.stanford.edu/projects/glove/)
 
 ## Running Experiments
-If you want to train the models from scratch, please run the run_pre.py first to pretrain the backbone. Then please specify the path of the pretrained checkpoints to "./checkpoints/[dataname]"
+If you want to train the models from scratch, please run the run_pre.py first to pretrain the backbone. Then specify the path of the pretrained checkpoints to "./checkpoints/[dataname]"
 * Run pretrain phase:
 ```bash
 python run_pre.py
@@ -40,6 +40,5 @@ python run_concatenation.py
 ## Acknowledgments
 Our project references the codes in the following repos.
 
-[**Meta-Transfer Learning**](https://github.com/yaoyao-liu/meta-transfer-learning)
-
-[**Adaptive Cross-Modal Few-shot Learning**](https://github.com/ElementAI/am3)
+* [**Meta-Transfer Learning**](https://github.com/yaoyao-liu/meta-transfer-learning)
+* [**Adaptive Cross-Modal Few-shot Learning**](https://github.com/ElementAI/am3)
