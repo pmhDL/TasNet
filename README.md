@@ -1,6 +1,6 @@
 # Few shot classification with task adaptive semantic feature learning (TasNet)
 
-PyTorch implementation of Few shot classification with task adaptive semantic feature learning
+PyTorch implementation for the paper: Few shot classification with task adaptive semantic feature learning
 
 ## Dependencies
 * python 3.6.5
