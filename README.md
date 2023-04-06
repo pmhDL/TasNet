@@ -20,11 +20,9 @@ Few-shot classification aims to learn a classifier that categorizes objects of u
 * [CIFAR-FS](https://drive.google.com/file/d/1GjGMI0q3bgcpcB_CjI40fX54WgLPuTpS/view?usp=sharing)
 * [CUB](https://drive.google.com/file/d/1hbzc_P1FuxMkcabkgn9ZKinBwW683j45/view)
 * [glove word embedding](https://nlp.stanford.edu/projects/glove/)
-  
-## Pretrained checkpoints for evaluation
-Please specify the path of the pretrained checkpoints to "./checkpoints/[dataname]"
 
 ## Running Experiments
+* Please specify the path of the pretrained checkpoints to "./checkpoints/[dataname]"
 Run pretrain phase:
 ```bash
 python run_pre.py
@@ -37,9 +35,9 @@ python run_fusion.py
 python run_concatenation.py
 ```
 ## LISENCE
-All materials are made available under the terms of the Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0) license. You can find details at: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+* All materials are made available under the terms of the Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0) license. You can find details at: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 
-The license gives permission for academic use only.
+* The license gives permission for academic use only.
 
 ## Acknowledgments
 Our project references the codes in the following repos.
