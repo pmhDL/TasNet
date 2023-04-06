@@ -10,10 +10,8 @@ PyTorch implementation of Few shot classification with task adaptive semantic fe
 * scipy 1.5.4
 * torchvision 0.9.0
 
-## Abstract
+## Overview
 Few-shot classification aims to learn a classifier that categorizes objects of unseen classes with limited samples. One general approach is to mine as much information as possible from limited samples. This can be achieved by incorporating data aspects from multiple modals. However, existing multi-modality methods only use additional modality in support samples while adhering to a single modal in query samples. Such approach could lead to information imbalance between support and query samples, which confounds model generalization from support to query samples. Towards this problem, we propose a task-adaptive semantic feature learning mechanism to incorporates semantic features for both support and query samples. The semantic feature learner is trained episodic-wisely by regressing from the feature vectors of the support samples. Then the query samples can obtain the semantic features with this module. Such method maintains a consistent training scheme between support and query samples and enables direct model transfer from support to query datasets, which significantly improves model generalization. We develop two modality combination implementations: feature concatenation and feature fusion, based on the semantic feature learner. Extensive experiments conducted on four benchmarks demonstrate that our method outperforms state-of-the-arts, proving the effectiveness of our method.
-
-## Architecture
 ![Image text](https://github.com/pmhDL/TasNet/blob/main/Image/architecture.png)
 
 ## Download the Datasets
@@ -38,6 +36,10 @@ or run_concatenation.py to train the meta learning model.
 python run_fusion.py
 python run_concatenation.py
 ```
+## LISENCE
+All materials are made available under the terms of the Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0) license. You can find details at: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+The license gives permission for academic use only.
 
 ## Acknowledgments
 Our project references the codes in the following repos.
