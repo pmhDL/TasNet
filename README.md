@@ -22,15 +22,13 @@ Few-shot classification aims to learn a classifier that categorizes objects of u
 * [glove word embedding](https://nlp.stanford.edu/projects/glove/)
 
 ## Running Experiments
-* Please specify the path of the pretrained checkpoints to "./checkpoints/[dataname]"
-Run pretrain phase:
+If you want to train the models from scratch, please run the run_pre.py first to pretrain the backbone. Then please specify the path of the pretrained checkpoints to "./checkpoints/[dataname]"
+* Run pretrain phase:
 ```bash
 python run_pre.py
 ```
-Run train and test phase:
+* Run train and test phases:
 ```bash
-If you want to train the models from scratch, please run the run_pre.py to pretrain the backbone, and then run the run_fusion.py 
-or run_concatenation.py to train the meta learning model.
 python run_fusion.py
 python run_concatenation.py
 ```
