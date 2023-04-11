@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 from models.backbones import Res12, WRN28
-from dataloader.dataset_loaderIm import DatasetLoader
+from dataloader.dataset_loader1 import DatasetLoader
 import os
 
 def extract_feature(data_loader, setname, model, savepath):
@@ -47,17 +47,17 @@ if torch.cuda.is_available():
 model_dict = model.state_dict()
 print('model_dict: ', model_dict.keys())
 checkpoint = torch.load(checkpointpath)
-state = checkpoint['model'] # params, model
+state = checkpoint['params'] # params, model
 #print('state: ', state.keys())
-state = {'encoder.' + k: v for k, v in state.items()}
-state = {k: v for k, v in state.items() if k in self.model_dict}
-#print('state: ', state.keys())
+#state = {'encoder.' + k: v for k, v in state.items()}
+state = {k: v for k, v in state.items() if k in model_dict}
+print('state: ', state.keys())
 model_dict.update(state)
 model.load_state_dict(model_dict)
 
 '''------------------------load data------------------------'''
-setname = 'test'
-dataset = DatasetLoader(setname, datadir)
+setname = 'train' #train val test
+dataset = DatasetLoader(setname, datadir, modeltype)
 data_loader = torch.utils.data.DataLoader(dataset=dataset, batch_size=128,
                                           shuffle=False, num_workers=12, pin_memory=True)
 extract_feature(data_loader, setname, model, savepath)
