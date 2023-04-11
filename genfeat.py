@@ -25,12 +25,12 @@ def extract_feature(data_loader, setname, model, savepath):
     return 0
 
 '''------------------------params---------------------------'''
-dataname = 'cub'    # mini, tiered, cub, cifar_fs
+dataname = 'mini'    # mini, tiered, cub, cifar_fs
 modeltype = 'res12'  # wrn28 res12
 datadir='./data/'+dataname
 checkpointpath='./checkpoints/'+dataname+'/'+modeltype+'.pth'
 savepath = '/data/'+dataname
-cuda_device = '1'
+cuda_device = '0'
 os.environ['CUDA_VISIBLE_DEVICES'] = cuda_device
 print('Using gpu:', cuda_device)
 '''-----------------------construct model----------------------------'''
